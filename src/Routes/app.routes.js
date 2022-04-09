@@ -1,6 +1,8 @@
 import React from 'react';
+
 import { TouchableOpacity } from 'react-native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 
 import Icon from 'react-native-vector-icons/MaterialIcons'
 
@@ -9,6 +11,9 @@ import UserForm from '../Pages/UserForm';
 
 
 const AppStack = createNativeStackNavigator();
+
+
+
 
 const screenOptions = {
     headerStyle: {
@@ -28,12 +33,12 @@ function AppRoutes() {
             <AppStack.Screen
                 name="UserList"
                 component={UserList}
-                options={() => {
+                options={({ navigation }) => {
                     return {
                         title: 'Lista de Usários',
                         headerRight: () => (
-                            <TouchableOpacity>
-                                <Icon name="add" size={22} color={'#fff'} />
+                            <TouchableOpacity onPress={() => navigation.navigate("UserForm")}>
+                                <Icon name="add" size={30} color={'#fff'} />
                             </TouchableOpacity>
 
                         )
