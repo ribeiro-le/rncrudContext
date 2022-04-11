@@ -39,7 +39,7 @@ function GetUsers({ data }) {
 
         Alert.alert(
             "Atenção!",
-            "Você tem certeza que deseja deletar esse ?",
+            "Você tem certeza que deseja deletar esse usuário ?",
             [
                 {
                     text: "Cancel",
