@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import {
     View,
@@ -12,12 +12,14 @@ import {
 
 import { useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/MaterialIcons'
-
-
+import UsersContext from '../../Context/UsersContext';
 
 
 
 function GetUsers({ data }) {
+
+    const { state, dispatch } = useContext(UsersContext)
+
 
     const navigation = useNavigation();
 
@@ -47,16 +49,17 @@ function GetUsers({ data }) {
                 },
                 {
                     text: "OK",
-                    onPress: () => handleDeleteRoom(idRoom)
+                    onPress() {
+                        dispatch({
+                            type: 'deleteUser',
+                            payload: data,
+
+                        })
+                    },
                 }
             ]
         )
-
-
     }
-
-
-
 
 
     return (

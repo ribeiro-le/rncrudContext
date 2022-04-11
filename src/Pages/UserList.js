@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import users from '../data/users'
 
@@ -16,9 +16,14 @@ import {
 import Icon from 'react-native-vector-icons/MaterialIcons'
 
 import { useNavigation } from '@react-navigation/native';
+import UsersContext from '../Context/UsersContext';
 
 
 function UserList() {
+
+    const { state } = useContext(UsersContext)
+
+
     const navigation = useNavigation();
 
     function handleForm() {
@@ -40,7 +45,7 @@ function UserList() {
             </View>
 
             <FlatList
-                data={users}
+                data={state.users}
                 keyExtractor={item => item.id}
                 renderItem={({ item }) => <GetUsers data={item} />}
             />
