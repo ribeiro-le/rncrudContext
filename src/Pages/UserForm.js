@@ -63,7 +63,7 @@ function UserForm(users) {
                 <Text style={styles.titleForm}>URL do Avatar</Text>
                 <TextInput
                     style={styles.input}
-                    onChangeText={avatar => setUser({ ...user, avatar })}
+                    onChangeText={avatarUrl => setUser({ ...user, avatarUrl })}
                     placeholder="Informe o  URL do Avatar"
                     placeholderTextColor={"#737380"}
                     value={user.avatarUrl}

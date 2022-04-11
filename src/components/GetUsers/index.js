@@ -18,7 +18,7 @@ import UsersContext from '../../Context/UsersContext';
 
 function GetUsers({ data }) {
 
-    const { state, dispatch } = useContext(UsersContext)
+    const { dispatch } = useContext(UsersContext)
 
 
     const navigation = useNavigation();
@@ -49,7 +49,7 @@ function GetUsers({ data }) {
                 },
                 {
                     text: "OK",
-                    onPress() {
+                    onPress: () => {
                         dispatch({
                             type: 'deleteUser',
                             payload: data,
