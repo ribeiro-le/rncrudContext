@@ -1,4 +1,10 @@
-# Visualização
+#  Visualização
+https://user-images.githubusercontent.com/88807757/162675418-6001850b-0663-4367-a002-04f143b0a0b1.mp4
+
+
+Uploading view.mp4…
+
+
 
 # Aplicação de Cadastro de Usário usando ContextAPI com useReducer
 
