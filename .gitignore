@@ -1,4 +1,3 @@
-android /
 
 # OSX
 #
@@ -25,6 +24,7 @@ DerivedData
 
 # Android/IntelliJ
 #
+android/
 build/
 .idea
 .gradle
